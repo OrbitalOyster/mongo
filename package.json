@@ -1,0 +1,38 @@
+{
+  "name": "@orbitaloyster/package-template",
+  "description": "INSERT_DESCRIPTION",
+  "version": "0.0.1",
+  "author": "OrbitalOyster",
+  "license": "MIT",
+  "repository": "OrbitalOyster/package-template",
+  "homepage": "https://github.com/OrbitalOyster/package-template#readme",
+  "bugs": {
+    "url": "https://github.com/OrbitalOyster/package-template/issues"
+  },
+  "main": "dist/index.js",
+  "type": "module",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "files": [
+    "dist",
+    "types"
+  ],
+  "types": "types",
+  "scripts": {
+    "tsc": "echo \"Compiling...\" && tsc && echo \"Done\"",
+    "lint": "echo \"Linting...\" && eslint src --ext .ts && echo \"Done\"",
+    "fix-lint": "echo \"Fixing code...\" && eslint src --ext .ts --fix && echo \"Done\"",
+    "prepublish": "npm run lint && npm run tsc"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-sonarjs": "^0.9.1",
+    "typescript": "^4.2.3"
+  }
+}
