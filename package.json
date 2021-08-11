@@ -1,13 +1,13 @@
 {
-  "name": "@orbitaloyster/package-template",
-  "description": "INSERT_DESCRIPTION",
+  "name": "@orbitaloyster/mongo",
+  "description": "Basic MongoDB connection.",
   "version": "0.0.1",
   "author": "OrbitalOyster",
   "license": "MIT",
-  "repository": "OrbitalOyster/package-template",
-  "homepage": "https://github.com/OrbitalOyster/package-template#readme",
+  "repository": "OrbitalOyster/mongo",
+  "homepage": "https://github.com/OrbitalOyster/mongo#readme",
   "bugs": {
-    "url": "https://github.com/OrbitalOyster/package-template/issues"
+    "url": "https://github.com/OrbitalOyster/mongo/issues"
   },
   "main": "dist/index.js",
   "type": "module",
@@ -34,5 +34,8 @@
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-sonarjs": "^0.9.1",
     "typescript": "^4.2.3"
+  },
+  "dependencies": {
+    "mongoose": "^5.13.6"
   }
 }
