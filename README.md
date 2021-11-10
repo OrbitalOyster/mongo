@@ -10,5 +10,6 @@ await mongo.connect("mongodb://user:password@dbHost/dbName");
 /* Some code */
 await mongo.close();
 ```
+
 # License
 [MIT](LICENSE)
