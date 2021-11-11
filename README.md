@@ -1,6 +1,6 @@
 # Installation
 ```bash
-npm install @orbitaloyster/mongo
+npm install orbitaloyster/mongo
 ```
 
 # Usage
