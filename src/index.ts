@@ -2,17 +2,11 @@ import { ICollectionIndex } from "../types/mongo";
 import mongoose from "mongoose";
 
 export async function connect(mongoUrl: string): Promise<void> {
-  /* Get rid of deprecation warnings */
-  const connectionOpts = {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-  };
   mongoose.connection.on("connected", () => console.log("Connected to DB"));
   mongoose.connection.on("disconnected", () =>
     console.log("Disconnected from DB")
   );
-  await mongoose.connect(mongoUrl, connectionOpts);
+  await mongoose.connect(mongoUrl);
 }
 
 async function setCreatedAtIndex(
