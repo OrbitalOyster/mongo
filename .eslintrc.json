@@ -18,7 +18,7 @@
     "sourceType": "module"
   },
   "plugins": [
-    "eslint-plugin-node"
+    "node"
   ],
   "rules": {
     "node/no-missing-import": ["error", {
