@@ -1,16 +1,16 @@
 {
   "env": {
-    "browser": true,
     "es2021": true,
     "node": true
   },
   "extends": [
     "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:node/recommended",
+    "plugin:prettier/recommended",
     "plugin:promise/recommended",
     "plugin:sonarjs/recommended",
-    "plugin:prettier/recommended"
+    "plugin:unicorn/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -18,9 +18,11 @@
     "sourceType": "module"
   },
   "plugins": [
-    "@typescript-eslint",
-    "promise",
-    "sonarjs",
-    "prettier"
-  ]
+    "eslint-plugin-node"
+  ],
+  "rules": {
+    "node/no-missing-import": ["error", {
+      "allowModules": ["mongo"]
+    }]
+  }
 }

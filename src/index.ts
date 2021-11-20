@@ -1,4 +1,4 @@
-import { ICollectionIndex } from "../types/mongo";
+import { ICollectionIndex } from "mongo";
 import mongoose from "mongoose";
 
 export async function connect(mongoUrl: string): Promise<void> {
@@ -33,9 +33,12 @@ async function collectionExists(collectionName: string): Promise<boolean> {
 async function getIndex(
   collection: mongoose.Collection,
   indexName: string
-): Promise<ICollectionIndex | null> {
+): Promise<ICollectionIndex | undefined> {
   const indexes = <Array<ICollectionIndex>>await collection.indexes();
-  return indexes.find((i: ICollectionIndex) => i.name === indexName) || null;
+  return (
+    indexes.find((index: ICollectionIndex) => index.name === indexName) ||
+    undefined
+  );
 }
 
 export async function setCollectionToExpire(
